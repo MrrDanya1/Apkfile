@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать APK файл</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .download-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-left: 5px solid #3a7bd5;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(58, 123, 213, 0.4);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 123, 213, 0.6);
+        }
+        
+        .github-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #24292e;
+        }
+        
+        h2 {
+            color: #3a7bd5;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #24292e;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            margin-left: 20px;
+        }
+        
+        .step {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #3a7bd5;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        code {
+            background-color: #24292e;
+            color: #f8f9fa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .code-block {
+            background-color: #24292e;
+            color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .step {
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Скачать APK файл</h1>
+            <p class="subtitle">Простое и безопасное скачивание приложения для Android</p>
+        </header>
+        
+        <div class="content">
+            <section class="download-section">
+                <h2>Скачайте приложение прямо сейчас</h2>
+                <p>Нажмите кнопку ниже, чтобы загрузить APK файл нашего приложения на ваше устройство Android.</p>
+                <a href="#" class="download-btn" id="downloadBtn">Скачать APK</a>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;">
+                    Размер файла: ~15 МБ | Версия: 1.0.0
+                </p>
+            </section>
+            
+            <section class="github-section">
+                <h2>Как загрузить APK файл на GitHub</h2>
+                <p>Если вы разработчик и хотите разместить свой APK файл на GitHub, следуйте этим шагам:</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <h3>Создайте репозиторий на GitHub</h3>
+                        <p>Зайдите на <a href="https://github.com" target="_blank">GitHub</a> и создайте новый репозиторий. Дайте ему понятное название, например "my-app-releases".</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Клонируйте репозиторий на ваш компьютер</h3>
+                        <p>Откройте терминал и выполните команду:</p>
+                        <div class="code-block">
+                            git clone https://github.com/ваш-username/название-репозитория.git
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Добавьте APK файл в папку репозитория</h3>
+                        <p>Скопируйте ваш APK файл в папку, которая была создана после клонирования репозитория.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Добавьте файл в Git и сделайте коммит</h3>
+                        <p>В терминале выполните следующие команды:</p>
+                        <div class="code-block">
+                            git add ваш-файл.apk<br>
+                            git commit -m "Добавлен APK файл версии X.X.X"
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Загрузите изменения на GitHub</h3>
+                        <p>Выполните команду:</p>
+                        <div class="code-block">
+                            git push origin main
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Создайте релиз (опционально)</h3>
+                        <p>На странице вашего репозитория на GitHub перейдите во вкладку "Releases" и создайте новый релиз. Прикрепите APK файл к релизу для удобства скачивания.</p>
+                    </div>
+                </div>
+                
+                <h3>Альтернативный способ: загрузка через веб-интерфейс</h3>
+                <p>Вы также можете загрузить APK файл прямо через веб-интерфейс GitHub:</p>
+                <ol style="margin-left: 30px; margin-bottom: 20px;">
+                    <li>Перейдите в ваш репозиторий на GitHub</li>
+                    <li>Нажмите кнопку "Add file" → "Upload files"</li>
+                    <li>Перетащите APK файл в область загрузки или выберите его через диалоговое окно</li>
+                    <li>Добавьте описание коммита и нажмите "Commit changes"</li>
+                </ol>
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2023 Сайт для скачивания APK файлов. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Простая имитация скачивания
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('В реальном сценарии здесь началось бы скачивание APK файла. В данном примере файл не прикреплен.');
+        });
+    </script>
+</body>
+</html>

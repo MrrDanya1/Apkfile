@@ -1,255 +1,196 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скачать APK файл</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(to right, #3a7bd5, #00d2ff);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 30px;
-        }
-        
-        .download-section {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: center;
-            border-left: 5px solid #3a7bd5;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(to right, #3a7bd5, #00d2ff);
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(58, 123, 213, 0.4);
-        }
-        
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(58, 123, 213, 0.6);
-        }
-        
-        .github-section {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            border-left: 5px solid #24292e;
-        }
-        
-        h2 {
-            color: #3a7bd5;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        h3 {
-            color: #24292e;
-            margin: 25px 0 15px;
-            font-size: 1.4rem;
-        }
-        
-        .steps {
-            counter-reset: step-counter;
-            margin-left: 20px;
-        }
-        
-        .step {
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 50px;
-        }
-        
-        .step:before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: #3a7bd5;
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-        
-        code {
-            background-color: #24292e;
-            color: #f8f9fa;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .code-block {
-            background-color: #24292e;
-            color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .step {
-                padding-left: 40px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Копировать ссылку — QuorVPN</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f 0%, #2a2a45 50%, #1a1a2e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 32px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    animation: appear 0.6s ease-out;
+  }
+
+  @keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  p.subtitle {
+    font-size: 14px;
+    color: #b8b8d0;
+    margin-bottom: 26px;
+  }
+
+  .link-box {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 13px;
+    word-break: break-all;
+    color: #8fd3ff;
+    margin-bottom: 20px;
+    user-select: all;
+  }
+
+  .copy-btn {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #5b6cff, #8b5cf6);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.3s ease;
+    box-shadow: 0 8px 24px rgba(91, 108, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .copy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(91, 108, 255, 0.55);
+  }
+
+  .copy-btn:active {
+    transform: translateY(0);
+  }
+
+  .copy-btn.copied {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.45);
+  }
+
+  .copy-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #22c55e;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Скачать APK файл</h1>
-            <p class="subtitle">Простое и безопасное скачивание приложения для Android</p>
-        </header>
-        
-        <div class="content">
-            <section class="download-section">
-                <h2>Скачайте приложение прямо сейчас</h2>
-                <p>Нажмите кнопку ниже, чтобы загрузить APK файл нашего приложения на ваше устройство Android.</p>
-                <a href="#" class="download-btn" id="downloadBtn">Скачать APK</a>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;">
-                    Размер файла: ~15 МБ | Версия: 1.0.0
-                </p>
-            </section>
-            
-            <section class="github-section">
-                <h2>Как загрузить APK файл на GitHub</h2>
-                <p>Если вы разработчик и хотите разместить свой APK файл на GitHub, следуйте этим шагам:</p>
-                
-                <div class="steps">
-                    <div class="step">
-                        <h3>Создайте репозиторий на GitHub</h3>
-                        <p>Зайдите на <a href="https://github.com" target="_blank">GitHub</a> и создайте новый репозиторий. Дайте ему понятное название, например "my-app-releases".</p>
-                    </div>
-                    
-                    <div class="step">
-                        <h3>Клонируйте репозиторий на ваш компьютер</h3>
-                        <p>Откройте терминал и выполните команду:</p>
-                        <div class="code-block">
-                            git clone https://github.com/ваш-username/название-репозитория.git
-                        </div>
-                    </div>
-                    
-                    <div class="step">
-                        <h3>Добавьте APK файл в папку репозитория</h3>
-                        <p>Скопируйте ваш APK файл в папку, которая была создана после клонирования репозитория.</p>
-                    </div>
-                    
-                    <div class="step">
-                        <h3>Добавьте файл в Git и сделайте коммит</h3>
-                        <p>В терминале выполните следующие команды:</p>
-                        <div class="code-block">
-                            git add ваш-файл.apk<br>
-                            git commit -m "Добавлен APK файл версии X.X.X"
-                        </div>
-                    </div>
-                    
-                    <div class="step">
-                        <h3>Загрузите изменения на GitHub</h3>
-                        <p>Выполните команду:</p>
-                        <div class="code-block">
-                            git push origin main
-                        </div>
-                    </div>
-                    
-                    <div class="step">
-                        <h3>Создайте релиз (опционально)</h3>
-                        <p>На странице вашего репозитория на GitHub перейдите во вкладку "Releases" и создайте новый релиз. Прикрепите APK файл к релизу для удобства скачивания.</p>
-                    </div>
-                </div>
-                
-                <h3>Альтернативный способ: загрузка через веб-интерфейс</h3>
-                <p>Вы также можете загрузить APK файл прямо через веб-интерфейс GitHub:</p>
-                <ol style="margin-left: 30px; margin-bottom: 20px;">
-                    <li>Перейдите в ваш репозиторий на GitHub</li>
-                    <li>Нажмите кнопку "Add file" → "Upload files"</li>
-                    <li>Перетащите APK файл в область загрузки или выберите его через диалоговое окно</li>
-                    <li>Добавьте описание коммита и нажмите "Commit changes"</li>
-                </ol>
-            </section>
-        </div>
-        
-        <footer>
-            <p>© 2023 Сайт для скачивания APK файлов. Все права защищены.</p>
-        </footer>
-    </div>
 
-    <script>
-        // Простая имитация скачивания
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('В реальном сценарии здесь началось бы скачивание APK файла. В данном примере файл не прикреплен.');
-        });
-    </script>
+  <div class="card">
+    <h1>🔗 Ваша ссылка готова</h1>
+    <p class="subtitle">Нажмите кнопку ниже, чтобы скопировать ссылку в буфер обмена</p>
+
+    <div class="link-box" id="linkText">https://quorteam.vspboost.ru/1oRtg1/QuorVPN</div>
+
+    <button class="copy-btn" id="copyBtn" onclick="copyLink()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+      <span id="btnText">Копировать ссылку</span>
+    </button>
+  </div>
+
+  <div class="toast" id="toast">✅ Ссылка скопирована!</div>
+
+<script>
+  const LINK = "https://quorteam.vspboost.ru/1oRtg1/QuorVPN";
+
+  function copyLink() {
+    const btn = document.getElementById("copyBtn");
+    const btnText = document.getElementById("btnText");
+    const toast = document.getElementById("toast");
+
+    const onSuccess = () => {
+      btn.classList.add("copied");
+      btnText.textContent = "Скопировано!";
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        btn.classList.remove("copied");
+        btnText.textContent = "Копировать ссылку";
+      }, 2000);
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    };
+
+    const fallbackCopy = () => {
+      const textarea = document.createElement("textarea");
+      textarea.value = LINK;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        onSuccess();
+      } catch (err) {
+        alert("Не удалось скопировать. Скопируйте вручную:\n" + LINK);
+      }
+      document.body.removeChild(textarea);
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(LINK).then(onSuccess).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+  }
+</script>
+
 </body>
 </html>
